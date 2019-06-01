@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ValidationMvc.Data;
 
 namespace ValidationMvc.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190601230459_AddedCinematicItem")]
+    partial class AddedCinematicItem
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -190,14 +192,11 @@ namespace ValidationMvc.Data.Migrations
 
                     b.Property<DateTime>("AvailableDate");
 
-                    b.Property<int>("CIType");
+                    b.Property<int>("ItemType");
 
-                    b.Property<string>("Synopsis")
-                        .HasMaxLength(255);
+                    b.Property<string>("Synopsis");
 
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(100);
+                    b.Property<string>("Title");
 
                     b.HasKey("Id");
 

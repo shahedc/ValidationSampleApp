@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ValidationMvc.Models;
 
 namespace ValidationMvc.Data
 {
@@ -12,5 +13,6 @@ namespace ValidationMvc.Data
             : base(options)
         {
         }
+        public DbSet<CinematicItem> CinematicItem { get; set; }
     }
 }
