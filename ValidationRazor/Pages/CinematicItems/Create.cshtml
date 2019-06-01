@@ -1,0 +1,44 @@
+﻿@page
+@model ValidationRazor.Pages.CinematicItems.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CinematicItem</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CinematicItem.Title" class="control-label"></label>
+                <input asp-for="CinematicItem.Title" class="form-control" />
+                <span asp-validation-for="CinematicItem.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CinematicItem.Synopsis" class="control-label"></label>
+                <input asp-for="CinematicItem.Synopsis" class="form-control" />
+                <span asp-validation-for="CinematicItem.Synopsis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CinematicItem.AvailableDate" class="control-label"></label>
+                <input asp-for="CinematicItem.AvailableDate" class="form-control" />
+                <span asp-validation-for="CinematicItem.AvailableDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

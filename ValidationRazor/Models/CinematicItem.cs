@@ -21,9 +21,6 @@ namespace ValidationRazor.Models
         [DisplayName("Available Date")]
         public DateTime AvailableDate { get; set; }
 
-        [Required]
-        [DisplayName("Movie/Show/etc")]
-        public CIType CIType { get; set; }
 
     }
 }
