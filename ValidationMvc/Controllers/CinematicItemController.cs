@@ -54,7 +54,7 @@ namespace ValidationMvc.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Synopsis,AvailableDate,CIType")] CinematicItem cinematicItem)
+        public async Task<IActionResult> Create([Bind("Id,Score,Title,Synopsis,AvailableDate,CIType")] CinematicItem cinematicItem)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace ValidationMvc.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Synopsis,AvailableDate,CIType")] CinematicItem cinematicItem)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Score,Title,Synopsis,AvailableDate,CIType")] CinematicItem cinematicItem)
         {
             if (id != cinematicItem.Id)
             {

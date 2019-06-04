@@ -16,6 +16,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.CinematicItem[0].Title)
             </th>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CinematicItem[0].Score)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.CinematicItem[0].Synopsis)
             </th>
@@ -30,6 +34,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Score)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Synopsis)

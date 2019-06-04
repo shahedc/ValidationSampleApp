@@ -16,6 +16,9 @@
                 @Html.DisplayNameFor(model => model.Title)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Score)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Synopsis)
             </th>
             <th>
@@ -32,6 +35,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Score)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Synopsis)

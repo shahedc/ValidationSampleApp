@@ -10,6 +10,9 @@ namespace ValidationMvc.Models
     {
         public int Id { get; set; }
 
+        [Range(1,100)]
+        public int Score { get; set; }
+
         [Required]
         [StringLength(100)]
         public string Title { get; set; }

@@ -10,6 +10,9 @@ namespace ValidationRazor.Models
     {
         public int Id { get; set; }
 
+        [Range(2,10)]
+        public int Score { get; set; }
+
         [Required]
         [StringLength(100)]
         public string Title { get; set; }
